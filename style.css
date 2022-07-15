@@ -5,6 +5,47 @@
     font-family: 'Gentium Book Plus', serif;
 }
 
+
+
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
+
+.navbar{
+    background-color: black;
+}
+
+.bi-cart-fill::before {
+    content: "\f23d";
+    color: white;
+}
+
+.btn-outline-dark {
+    color:white !important;
+    border-color: white !important;
+}
+
+.dropdown-item{
+    color:white !important;
+}
+
+.dropdown-item:hover{
+    color:black !important;
+}
+
+.dropdown-menu{
+    background-color: black !important;
+}
+
+
+.navbar-light .navbar-toggler-icon {
+    display: none;
+}
+
+
+
+
+
 .icono{
     width: 50px;
     height: 50px;
@@ -14,8 +55,13 @@
 .card{
     margin-top: 30px;
     margin:10px;
+    transition:0.3s;
 }
 
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform:translateY(-2%);
+}
 
 .cards{
     margin-top:50px;
@@ -46,21 +92,88 @@
 }
 
 
+footer{
+    background-color: black;
+    height:350px;
+    width:100%;
+    margin-top:50px;
+    position: absolute;
+}
 
 
 
+.footerDivs{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    justify-items: center;
+    align-items:center;
+}
+
+
+.titulosFooter{
+    margin-top:50px;
+    color:rgb(163, 154, 154);
+}
+
+.iconosFooter{
+    display: grid;
+    grid-template-columns:1fr;
+}
+
+.fa-solid{
+    margin-top:20px;
+    color: white;
+}
+
+.fa-solid a{
+    text-decoration: none;
+    color:rgb(163, 154, 154);
+}
+
+.fa-solid a:hover{
+    color:white;
+}
+
+
+.textoHorarios{
+    color:rgb(163, 154, 154);
+}
+
+
+.fa-brands{
+    color:white;
+    margin-top:30px;
+}
 
 
 
+p.copyright{
+    margin:0;
+    padding:0;
+    margin-bottom:0;
+    text-align: center;
+    margin-top: 60px;
+    color:rgb(163, 154, 154);
+}
 
 
+.imgFooter{
+    width:100px;
+    height:100px;
+    margin-top:80px;
+}
 
+.navbar-light .navbar-toggler {
+    color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
 
-
-
-
-
-
+button:focus:not(:focus-visible) {
+    outline: 0;
+    color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+    
+}
 
 
 
@@ -88,3 +201,22 @@
         flex-basis: auto;
     }
 }
+
+@media (max-width:515px){
+
+    footer{
+        height:700px;
+
+    }
+
+
+    .footerDivs{
+        grid-template-columns:1fr;
+    }
+
+    
+
+    
+    
+}
+

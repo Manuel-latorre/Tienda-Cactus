@@ -6,7 +6,7 @@ class Producto{
         this.precio = precio;
         this.stock = stock;
     } 
-}
+} 
 
 
 const producto1 = new Producto("Nike Jordan 6 off white", 41, 280, 2);
@@ -16,15 +16,14 @@ const producto4 = new Producto("Nike Jordan 1 low", 39, 615, 3);
 const producto5 = new Producto("Hoodie Cactus Jack", "M", 219, 4);
 const producto6 = new Producto("Remera Kaws", "S", 90, 4);
 const producto7 = new Producto("Remera McQueen", "XL", 75, 2);
-const producto8 = new Producto("Crewneck Supreme", "L", 235, 5); 
-
+const producto8 = new Producto("Crewneck Supreme", "L", 235, 5);
 
 
 /* Variables que utilizo dentro del simulador */
 
 let totalCarrito = 1;
 let precio = 1;
-let respuesta;
+let respuesta; 
 
 
 
@@ -64,8 +63,7 @@ for (let intentos = 0; intentos <= 2; intentos++) {
     if (intentos === 2){
         alert("Intentos agotados, vuelva pronto")
     }
-}   
-
+}
 
 
 
