@@ -53,8 +53,8 @@
 
 
 .card{
-    margin-top: 30px;
-    margin:10px;
+    margin-top:50px;
+    margin:20px;
     transition:0.3s;
 }
 
@@ -64,11 +64,15 @@
 }
 
 .cards{
-    margin-top:50px;
     display:flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
 }
+
+.button:hover{
+    color:rgb(8, 230, 8)!important;
+}
+
 
 .button{
     display:grid;
@@ -197,8 +201,8 @@ button:focus:not(:focus-visible) {
 @media (min-width: 992px){
     .navbar-expand-lg .navbar-collapse {
         display: flex;
-        justify-content: space-between;
         flex-basis: auto;
+        justify-content: center;
     }
 }
 
@@ -214,9 +218,5 @@ button:focus:not(:focus-visible) {
         grid-template-columns:1fr;
     }
 
-    
-
-    
-    
 }
 
