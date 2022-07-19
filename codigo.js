@@ -132,10 +132,15 @@ else(ingresarNumero !== numCompra);{
 
 function estadoDeEnvio(){
     let ingresarNumeroDeEnvio = parseInt(prompt("Ingrese numero de envio"));
+    let existeNumero = numEnvio.find((numero) => {
+        return numero = ingresarNumeroDeEnvio
+    }); 
+
     if (ingresarNumeroDeEnvio === 1010){
         alert("Fecha y hora: 12/07/2022, 14:41" + "\n"
             + "Estado: Pendiente de ingreo al Correo" + "\n"
             + "Sucursal: Rodriguez A");
+            return;
     }
 
     if (ingresarNumeroDeEnvio === 2121){
@@ -146,6 +151,7 @@ function estadoDeEnvio(){
             + "Fecha y hora: 11/07/2022, 9:23" + "\n"
             + "Estado: En proceso en el Correo" + "\n"
             + "Sucursal: Maipu 455" + "\n");
+            return;
     }
 
     if (ingresarNumeroDeEnvio === 9999){
@@ -164,6 +170,7 @@ function estadoDeEnvio(){
             + "Fecha y hora: 19/07/2022, 8:05" + "\n"
             + "Estado: Programado para visita a domicilio" + "\n"
             + "Sucursal: Centro de operaciones Bs As" + "\n");
+            return;
     }
 
     if (ingresarNumeroDeEnvio === 9876){
@@ -186,6 +193,7 @@ function estadoDeEnvio(){
             + "Fecha y hora: 27/07/2022, 14:58" + "\n"
             + "Estado: Entregado" + "\n"
             + "Sucursal: General Paz" + "\n");
+            return;
     }
 
     else(ingresarNumeroDeEnvio !== numEnvio);{
