@@ -29,6 +29,10 @@ let añadirAlCarrito = [];
 let numCompra = [0003, 1111, 2222, 3434];
 let numEnvio = [1010, 2121, 9999, 9876];
 
+let totalCarrito = 1;
+let precio = 1;
+let respuesta; 
+
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 
@@ -49,22 +53,22 @@ function ingresarOperacion(){
             break;
             
         }
-            entrada = parseInt(prompt("Ingrese con el numero correspondiente la operacion que desea realizar: \n1)Visitar la tienda\n2)Ver mis compras\n3)Estado de envio de mi compra\n4)Salir"));
+        entrada = parseInt(prompt("Ingrese con el numero correspondiente la operacion que desea realizar: \n1)Visitar la tienda\n2)Ver mis compras\n3)Estado de envio de mi compra\n4)Salir"));
     }
-
+    
 }
 
 /* funcion para mostrar los productos de la tienda */
 
 function visitarLaTienda(){
     let textoAux = "";
-    listadoProductos.forEach((producto) => {
-        textoAux += "-" +
-        producto.nombre + " " + "Precio:" + " " + "$" + " " + producto.precio + " " + "Stock:"+ " " + producto.stock + "\n";
-    });
-    prompt(textoAux);
-    
-}
+        listadoProductos.forEach((producto) => {
+            textoAux += "-" +
+            producto.nombre + " " + "Precio:" + " " + "$" + " " + producto.precio + " " + "Stock:"+ " " + producto.stock + "\n";
+        });
+        alert(textoAux); 
+} 
+
 
 /* funcion para que el usuario pueda ver las compras que hizo mediante el ingreso del numero de compra */
 
@@ -76,56 +80,56 @@ let existe = numCompra.find((numero) => {
 
 if (ingresarNumero === 0003){
     alert("Producto: " + producto1.nombre + "\n"
-        + "Precio: " + "$" + producto1.precio + "\n"
-        + "Costo de envio a domicilio: $500 " + "\n"
-        + "Direccion de envio: 23 n678, Cordoba " + "\n"
-        + "Total: $780" + "\n"
-        + "Metodo de pago: MercadoPago" + "\n"
-        + "Fecha de compra: 20/7/22" + "\n");
-        return;
+    + "Precio: " + "$" + producto1.precio + "\n"
+    + "Costo de envio a domicilio: $500 " + "\n"
+    + "Direccion de envio: 23 n678, Cordoba " + "\n"
+    + "Total: $780" + "\n"
+    + "Metodo de pago: MercadoPago" + "\n"
+    + "Fecha de compra: 20/7/22" + "\n");
+    return existe;
 }
 
 if (ingresarNumero === 2222){
     alert("Producto: " + producto6.nombre + "\n"
-        + "Precio: " + "$" + producto6.precio + "\n"
-        + "Costo de envio a domicilio: $500 " + "\n"
-        + "Direccion de envio: Calle 12 n20, Entre Rios " + "\n"
-        + "Total: $590" + "\n"
-        + "Metodo de pago: Efectivo, Rapipago" + "\n"
-        + "Fecha de compra: 2/5/22" + "\n");
-        return;
+    + "Precio: " + "$" + producto6.precio + "\n"
+    + "Costo de envio a domicilio: $500 " + "\n"
+    + "Direccion de envio: Calle 12 n20, Entre Rios " + "\n"
+    + "Total: $590" + "\n"
+    + "Metodo de pago: Efectivo, Rapipago" + "\n"
+    + "Fecha de compra: 2/5/22" + "\n");
+    return existe;
 }
 
 
 if (ingresarNumero === 1111){
     alert("Producto: " + producto2.nombre + "\n"
-        + "Precio: " + "$" + producto2.precio + "\n"
-        + "Costo de envio a sucursal: $400 " + "\n"
-        + "Direccion de sucursal: n34, Capital Federal " + "\n"
-        + "Total: $810" + "\n"
-        + "Metodo de pago: Visa debito terminada en 0011" + "\n"
-        + "Fecha de compra: 16/6/22" + "\n");
-        return
-}
-
-if (ingresarNumero === 3434){
-    alert("Producto: " + producto4.nombre + "\n"
+    + "Precio: " + "$" + producto2.precio + "\n"
+    + "Costo de envio a sucursal: $400 " + "\n"
+    + "Direccion de sucursal: n34, Capital Federal " + "\n"
+    + "Total: $810" + "\n"
+    + "Metodo de pago: Visa debito terminada en 0011" + "\n"
+    + "Fecha de compra: 16/6/22" + "\n");
+        return existe;
+    }
+    
+    if (ingresarNumero === 3434){
+        alert("Producto: " + producto4.nombre + "\n"
         + "Precio: " + "$" + producto4.precio + "\n"
         + "Costo de envio a domicilio: $500 " + "\n"
         + "Direccion de envio: Calle 68 n111, Jujuy, Capital " + "\n"
         + "Total: $1115" + "\n"
         + "Metodo de pago: Paypal" + "\n"
         + "Fecha de compra: 10/6/22" + "\n");
-        return;
-}
-
-else(ingresarNumero !== numCompra);{
-
-    alert("Numero de compra ingresado incorrecto")
-}
+        return existe;
+    }
     
-
-
+    else(ingresarNumero !== numCompra);{
+        
+        alert("Numero de compra ingresado incorrecto")
+    }
+    
+    
+    
 }
 
 /* funcion para que el usuario pueda ver el seguimiento de su compra */
@@ -135,27 +139,27 @@ function estadoDeEnvio(){
     let existeNumero = numEnvio.find((numero) => {
         return numero = ingresarNumeroDeEnvio
     }); 
-
+    
     if (ingresarNumeroDeEnvio === 1010){
         alert("Fecha y hora: 12/07/2022, 14:41" + "\n"
-            + "Estado: Pendiente de ingreo al Correo" + "\n"
-            + "Sucursal: Rodriguez A");
-            return;
+        + "Estado: Pendiente de ingreo al Correo" + "\n"
+        + "Sucursal: Rodriguez A");
+        return existeNumero;
     }
-
+    
     if (ingresarNumeroDeEnvio === 2121){
         alert("Fecha y hora: 10/07/2022, 20:51" + "\n"
-            + "Estado: Admitido en el Correo" + "\n"
+        + "Estado: Admitido en el Correo" + "\n"
             + "Sucursal: Maipu 455" + "\n"
             + "\n"
             + "Fecha y hora: 11/07/2022, 9:23" + "\n"
             + "Estado: En proceso en el Correo" + "\n"
             + "Sucursal: Maipu 455" + "\n");
-            return;
-    }
-
-    if (ingresarNumeroDeEnvio === 9999){
-        alert("Fecha y hora: 17/07/2022, 17:08" + "\n"
+            return existeNumero;
+        }
+        
+        if (ingresarNumeroDeEnvio === 9999){
+            alert("Fecha y hora: 17/07/2022, 17:08" + "\n"
             + "Estado: Admitido en el Correo" + "\n"
             + "Sucursal: Balcarce 102" + "\n"
             + "\n"
@@ -170,11 +174,11 @@ function estadoDeEnvio(){
             + "Fecha y hora: 19/07/2022, 8:05" + "\n"
             + "Estado: Programado para visita a domicilio" + "\n"
             + "Sucursal: Centro de operaciones Bs As" + "\n");
-            return;
-    }
-
-    if (ingresarNumeroDeEnvio === 9876){
-        alert("Fecha y hora: 25/07/2022, 02:18" + "\n"
+            return existeNumero;
+        }
+        
+        if (ingresarNumeroDeEnvio === 9876){
+            alert("Fecha y hora: 25/07/2022, 02:18" + "\n"
             + "Estado: Admitido en el Correo" + "\n"
             + "Sucursal: Villa Gral Gonzales" + "\n"
             + "\n"
@@ -193,18 +197,19 @@ function estadoDeEnvio(){
             + "Fecha y hora: 27/07/2022, 14:58" + "\n"
             + "Estado: Entregado" + "\n"
             + "Sucursal: General Paz" + "\n");
-            return;
+            return existeNumero;
+        }
+        
+        else(ingresarNumeroDeEnvio !== numEnvio);{
+            alert("Numero de envio ingresado incorrecto")
+        }
     }
-
-    else(ingresarNumeroDeEnvio !== numEnvio);{
-        alert("Numero de envio ingresado incorrecto")
-    }
+    
+    let validar = ingresarOperacion();
+    if (validar){
+        ingresarOperacion();
 }
 
-let validar = ingresarOperacion();
-if (validar){
-    ingresarOperacion();
-}
 
 
 
@@ -229,6 +234,7 @@ if (validar){
 
 
 
+    
 
 
 
@@ -303,20 +309,15 @@ if (validar){
 
 
 
-/* let totalCarrito = 1;
-let precio = 1;
-let respuesta; 
 
-
-
-for (let intentos = 0; intentos <= 2; intentos++) {
+/* for (let intentos = 0; intentos <= 2; intentos++) {
     let contraseña = parseInt(prompt('Ingrese su clave'));
     if (contraseña === 321){
             alert("Elija el producto que quiera añadir al carrito");
             function agregarAlCarrito(Producto){
-                console.log("Agregaste al carrito: " + Producto + " " + "$" + precio);
-                console.log("Total productos: " + totalCarrito++);
-                console.log("Precio Total: " + precio++);
+                alert("Agregaste al carrito: " + Producto + " " + "$" + precio);
+                alert("Total productos: " + totalCarrito++);
+                alert("Precio Total: " + precio++);
                 if (totalCarrito === 4){
                     prompt("Su carrito ya esta lleno, ¿Desea finalizar la compra?");
                     if (respuesta === "si" && respuesta === "Si");{
