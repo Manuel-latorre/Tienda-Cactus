@@ -1,6 +1,219 @@
-/* clase constructora */
+/* Array con los prodcutos de la seccion de cards 1 */
 
-class Producto{
+const productosCard1 = [
+    {id: 1, nombre:"Nike Jordan 6 off white", precio: 45670, img: "./imagenesIndex/imagenesCards/imagencard1.webp"},
+    {id: 2, nombre:"Nike Jordan 1 high Og", precio: 38200, img: "./imagenesIndex/imagenesCards/imagencard2.webp"},
+    {id: 3, nombre:"Nike Jordan 4 X Levis", precio: 68000, img: "./imagenesIndex/imagenesCards/imagencard3.jpg"},
+    {id: 4, nombre:"Nike Jordan 1 low", precio: 50000, img: "./imagenesIndex/imagenesCards/imagencard4.jpg"},
+];
+
+/* Array con los productos de la seccion de cards 2 */
+
+const productosCard2 = [
+    {id: 5, nombre:"Hoodie Cactus Jack", precio: 23500, img: "./imagenesIndex/imagenesCards/hoodie1.jpg"},
+    {id: 6, nombre:"Remera Kaws", precio: 9800, img:"./imagenesIndex/imagenesCards/cardremera.webp"},
+    {id: 7, nombre:"Remera McQueen", precio: 12500, img:"./imagenesIndex/imagenesCards/cardremera2.webp"},
+    {id: 8, nombre:"Crewneck Supreme", precio: 28000, img:"./imagenesIndex/imagenesCards/cardneck.webp"},
+];
+
+let cards = "";
+
+
+/* Seccion de cards 1 */
+
+productosCard1.forEach((producto) => {
+    const idButton = `agregarCarrito${producto.id}`
+    document.getElementById("cards").innerHTML +=
+`<div class='card' style='width: 16rem;'>
+    <img src="${producto.img}" class='card-img-top btn' alt='card imagen'>
+    <div class='card-body'>
+        <h5 class='card-title text-center'>${producto.nombre}</h5>
+        <p class="card-text text-center"><b>$${producto.precio}</b></p>
+        <button class="botonStyle" id="${idButton}">Agregar al carrito</button>
+    </div>
+</div>`;
+})
+
+productosCard1.forEach((producto) => {
+    const idButton = `agregarCarrito${producto.id}`
+    document.getElementById(idButton).addEventListener('click', () => {
+        alert("Agregaste al carrito:"+" "+ producto.nombre);
+    })
+});
+
+
+/* Seccion de cards 2 */
+
+productosCard2.forEach((producto) => {
+    const idButton = `agregarCarrito${producto.id}`
+    document.getElementById("cards-dos").innerHTML +=
+`<div class='card' style='width: 16rem;'>
+    <img src="${producto.img}" class='card-img-top btn' alt='card imagen'>
+    <div class='card-body'>
+        <h5 class='card-title text-center'>${producto.nombre}</h5>
+        <p class="card-text text-center"><b>$${producto.precio}</b></p>
+        <button class="botonStyle" id="${idButton}">Agregar al carrito</button>
+    </div>
+</div>`;
+})
+
+productosCard2.forEach((producto) => {
+    const idButton = `agregarCarrito${producto.id}`
+    document.getElementById(idButton).addEventListener('click', () => {
+        alert("Agregaste al carrito:"+" "+ producto.nombre);
+    })
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+<div class="card" style="width: 16rem;">
+                <img src="./imagenesIndex/imagenesCards/imagencard1.webp" class="card-img-top btn" alt="card imagen">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Nike Jordan 6 off white</h5>
+                    <p class="card-text text-center"> <b class="precio">$310</b>$280</p>
+                    <a href="#" class="button" onclick="agregarAlCarrito('Nike Jordan 6 off white')">Agregar al carrito</a>
+                </div>
+            </div> */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* let producto1 = new Producto("Nike Jordan 6 off white", 280, 2);
+let producto2 = new Producto("Nike Jordan 1 high Og", 410, 5);
+let producto3 = new Producto("Nike Jordan 4 X Levis", 100, 1);
+let producto4 = new Producto("Nike Jordan 1 low", 615, 3);
+let producto5 = new Producto("Hoodie Cactus Jack", 219, 4);
+let producto6 = new Producto("Remera Kaws", 90, 4);
+let producto7 = new Producto("Remera McQueen", 75, 2);
+let producto8 = new Producto("Crewneck Supreme", 235, 5); */  
+
+
+
+
+/* class Producto {
     constructor(nombre, precio, stock){
         this.nombre = nombre;
         this.precio = precio;
@@ -9,20 +222,19 @@ class Producto{
     }
 } 
 
-/* asignandole valor a las variables de productos */
 
-let producto1 = new Producto("Nike Jordan 6 off white", 280, 2);
-let producto2 = new Producto("Nike Jordan 1 high Og", 410, 5);
-let producto3 = new Producto("Nike Jordan 4 X Levis", 100, 1);
-let producto4 = new Producto("Nike Jordan 1 low", 615, 3);
-let producto5 = new Producto("Hoodie Cactus Jack", 219, 4);
-let producto6 = new Producto("Remera Kaws", 90, 4);
-let producto7 = new Producto("Remera McQueen", 75, 2);
-let producto8 = new Producto("Crewneck Supreme", 235, 5);
+
+
+
+
+
+
+
+
 
 
 /* Arrays para manipular en las funciones */
-const listadoProductos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8];
+/* const listadoProductos = [producto1, producto2, producto3, producto4, producto5, producto6, producto7, producto8];
 
 let añadirAlCarrito = [];
 
@@ -31,14 +243,14 @@ let numEnvio = [1010, 2121, 9999, 9876];
 
 let totalCarrito = 1;
 let precio = 1;
-let respuesta; 
+let respuesta;  */
 
 /*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
 
 /* funcion para que el usuario elija que tipo de opreacion desea realizar */
 
-function ingresarOperacion(){
+/* function ingresarOperacion(){
     let entrada = parseInt(prompt("Bienvenido a Tienda Cactus, Ingrese con el numero correspondiente la operacion que desea realizar: \n1)Visitar la tienda\n2)Ver mis compras\n3)Estado de envio de mi compra\n4)Salir"));
     while (entrada !== 4){
 
@@ -56,23 +268,23 @@ function ingresarOperacion(){
         entrada = parseInt(prompt("Ingrese con el numero correspondiente la operacion que desea realizar: \n1)Visitar la tienda\n2)Ver mis compras\n3)Estado de envio de mi compra\n4)Salir"));
     }
     
-}
+} */
 
 /* funcion para mostrar los productos de la tienda */
 
-function visitarLaTienda(){
-    let textoAux = "";
+/* function visitarLaTienda(){
+    let textoAux = ""
         listadoProductos.forEach((producto) => {
             textoAux += "-" +
             producto.nombre + " " + "Precio:" + " " + "$" + " " + producto.precio + " " + "Stock:"+ " " + producto.stock + "\n";
         });
-        alert(textoAux); 
-} 
+        prompt(textoAux);
+}  */
 
 
 /* funcion para que el usuario pueda ver las compras que hizo mediante el ingreso del numero de compra */
 
-function verMisCompras(){
+/* function verMisCompras(){
 let ingresarNumero = parseInt(prompt("Ingrese su numero de compra"));
 let existe = numCompra.find((numero) => {
     return numero = ingresarNumero
@@ -130,11 +342,11 @@ if (ingresarNumero === 1111){
     
     
     
-}
+} */
 
 /* funcion para que el usuario pueda ver el seguimiento de su compra */
 
-function estadoDeEnvio(){
+/* function estadoDeEnvio(){
     let ingresarNumeroDeEnvio = parseInt(prompt("Ingrese numero de envio"));
     let existeNumero = numEnvio.find((numero) => {
         return numero = ingresarNumeroDeEnvio
@@ -209,6 +421,7 @@ function estadoDeEnvio(){
     if (validar){
         ingresarOperacion();
 }
+ */
 
 
 

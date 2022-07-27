@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="codigo.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./imagenesIndex/cactus.png" type="image/x-icon">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,28 +37,35 @@
                                 Sneakers
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="./paginas-sneakers.html/jordanuno.html">Jordan 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Jordan 3</a></li>
+                                    <li><a class="dropdown-item" href="#">Jordan 4</a></li>
+                                    <li><a class="dropdown-item" href="#">Jordan 6</a></li>
+                                    <li><a class="dropdown-item" href="#">Nike Dunks low</a></li>
+                                    <li><a class="dropdown-item" href="#">Nike Dunks High</a></li>
                                 </ul>
                             </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">T-shirts</a>
-                </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">T-shirts</a>
+                            </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Hoodies</a>
                 </li>
-                    </ul>
-                </div>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+            </ul>
+        </div>
+        <form class="d-flex">
+                    <button class="btn btn-outline-dark" type="button" id="carrito">
                         <i class="bi-cart-fill me-1"></i>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        <span class="badge bg-dark numeroCarrito">0</span>
                     </button>
                 </form>
+
             </div>
         </nav>
     </header>
+    <div class="bannerEnvios">
+        <p>Envíos gratis a todo el país a partir de $16.999 -3 cuotas sin interés, AHORA 6 y AHORA 12</p>
+    </div>
     <main>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
@@ -67,6 +74,9 @@
             </div>
             <div class="carousel-item">
                 <img src="./imagenesIndex/carrusel109.webp" class="d-block w-100" alt="foto">
+            </div>
+            <div class="carousel-item">
+                <img src="./imagenesIndex/carrusel222.webp" class="d-block w-100" alt="foto">
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -77,81 +87,23 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+
         <div>
-            <h2 class="tituloOferta">Ofertas</h2>
-        </div>
-        <section class="cards">
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/imagencard1.webp" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Nike Jordan 6 off white</h5>
-                    <p class="card-text text-center"> <b class="precio">$310</b>$280</p>
-                    <a href="#" class="button" onclick="agregarAlCarrito('Nike Jordan 6 off white')">Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/imagencard2.webp" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Nike Jordan 1 high Og</h5>
-                    <p class="card-text text-center"> <b class="precio">$450</b>$410</p>
-                    <a href="#" class="button" onclick="agregarAlCarrito('Nike Jordan 1 high Og')">Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/imagencard3.jpg" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Nike Jordan 4 X Levi's</h5>
-                    <p class="card-text text-center"> <b class="precio">$140</b>100</p>
-                    <a href="#" class="button" onclick="agregarAlCarrito('Nike Jordan 4 X Levis')">Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/imagencard4.jpg" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Nike Jordan 1 low </h5>
-                    <p class="card-text text-center"> <b class="precio">$670</b>$615</p>
-                    <a href="#" class="button" onclick="agregarAlCarrito('Nike Jordan 1 low')">Agregar al carrito</a>
-                </div>
-            </div>
-        </section>
-        <div>
-            <h2 class="tituloOferta">Productos populares</h2>
+            <h2 class="titulosMenu">Sneakers</h2>
         </div>
 
-        <section class="cards">
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/hoodie1.jpg" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Hoodie Cactus Jack</h5>
-                    <p class="card-text text-center"> <b class="precio">$234</b>$219</p>
-                    <a href="#" class="button"onclick="agregarAlCarrito('Hoodie Cactus Jack')">Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/cardremera.webp" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Remera Kaws</h5>
-                    <p class="card-text text-center"> <b class="precio">$115</b>$90</p>
-                    <a href="#" class="button"onclick="agregarAlCarrito('Remera Kaws')">Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/cardremera2.webp" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Remera McQueen</h5>
-                    <p class="card-text text-center"> <b class="precio">$90</b>$75</p>
-                    <a href="#" class="button"onclick="agregarAlCarrito('Remera McQueen')">Agregar al carrito</a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/cardneck.webp" class="card-img-top" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Crewneck Supreme</h5>
-                    <p class="card-text text-center"> <b class="precio">$370</b>$235</p>
-                    <a href="#" class="button"onclick="agregarAlCarrito('Crewneck Supreme')">Agregar al carrito</a>
-                </div>
-            </div>
+        <section id="cards">
+            
         </section>
+        
+        <div>
+            <h2 class="titulosMenu">Productos Hype</h2>
+        </div>
+
+        <section id="cards-dos">
+            
+        </section>
+        
     </main>
 
 
@@ -181,7 +133,7 @@
 
             <div>
                 <h3 class="titulosFooter text-center">Atencion al cliente</h3>
-    
+                
                 <p class="textoHorarios text-center">Lunes a Viernes de 9 a 20 hs / Sábado de 9 a 17 hs</p>
 
                 <div class="iconosFooter text-center">
@@ -202,6 +154,7 @@
         
     </footer>
     
+<script src="codigo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
