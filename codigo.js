@@ -1,27 +1,143 @@
+document.addEventListener("keyup", e => {
+    
+    if(e.target.matches("#buscador")){
+
+        if(e.key=== "Escape")e.target.value = ""
+        
+        document.querySelectorAll(".productos").forEach(productos =>{
+
+            productos.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+            ?productos.classList.remove("filtro")
+            :productos.classList.add("filtro")
+        })
+    }
+}) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const carrito = JSON.parse(localStorage.getItem("carrito")) ?? [];
+const total = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+document.getElementById("sumarCarrito").innerHTML =  `${carrito.length} - $${total}`; */
+
+/* function generarCardsCarrito(){
+    carrito.forEach((producto) => {
+        document.getElementById("cards-modal").innerHTML +=  
+    })
+} */
+
+
+
+
+
 /* Array con los prodcutos de la seccion de cards 1 */
 
-const productosCard1 = [
+/* const productosCard1 = [
     {id: 1, nombre:"Nike Jordan 6 off white", precio: 45670, img: "./imagenesIndex/imagenesCards/imagencard1.webp"},
     {id: 2, nombre:"Nike Jordan 1 high Og", precio: 38200, img: "./imagenesIndex/imagenesCards/imagencard2.webp"},
     {id: 3, nombre:"Nike Jordan 4 X Levis", precio: 68000, img: "./imagenesIndex/imagenesCards/imagencard3.jpg"},
     {id: 4, nombre:"Nike Jordan 1 low", precio: 50000, img: "./imagenesIndex/imagenesCards/imagencard4.jpg"},
-];
+]; */
 
 /* Array con los productos de la seccion de cards 2 */
 
-const productosCard2 = [
+/* const productosCard2 = [
     {id: 5, nombre:"Hoodie Cactus Jack", precio: 23500, img: "./imagenesIndex/imagenesCards/hoodie1.jpg"},
     {id: 6, nombre:"Remera Kaws", precio: 9800, img:"./imagenesIndex/imagenesCards/cardremera.webp"},
     {id: 7, nombre:"Remera McQueen", precio: 12500, img:"./imagenesIndex/imagenesCards/cardremera2.webp"},
     {id: 8, nombre:"Crewneck Supreme", precio: 28000, img:"./imagenesIndex/imagenesCards/cardneck.webp"},
 ];
 
-let cards = "";
+let cards = ""; */
 
 
 /* Seccion de cards 1 */
 
-productosCard1.forEach((producto) => {
+/* productosCard1.forEach((producto) => {
     const idButton = `agregarCarrito${producto.id}`
     document.getElementById("cards").innerHTML +=
 `<div class='card' style='width: 16rem;'>
@@ -32,19 +148,43 @@ productosCard1.forEach((producto) => {
         <button class="botonStyle" id="${idButton}">Agregar al carrito</button>
     </div>
 </div>`;
-})
+}) */
 
-productosCard1.forEach((producto) => {
+/* productosCard1.forEach((producto) => {
     const idButton = `agregarCarrito${producto.id}`
     document.getElementById(idButton).addEventListener('click', () => {
-        alert("Agregaste al carrito:"+" "+ producto.nombre);
+        carrito.push(producto); */
+        /* localStorage.setItem("carrito", JSON.stringify(carrito));
+        const total = carrito.reduce((acumulador, producto) => acumulador + producto.precio, 0);
+        document.getElementById("sumarCarrito").innerHTML =  `${carrito.length} - $${total}`; */
+        /* document.getElementById("cards").innerHTML +=  `<tr>
+        <th scope ="row">${producto.id}</th>
+        <td>${producto.nombre}</td>
+        <td><img src="${producto.img}"</td>
+        <td>${producto.precio}</td>
+        <td><button>Eliminar del carrrito</button></td>
+        </tr>` */
+        
+      /*   document.getElementById("sumarCarrito").innerHTML = carrito.length; 
     })
-});
+});  */
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Seccion de cards 2 */
 
-productosCard2.forEach((producto) => {
+/* productosCard2.forEach((producto) => {
     const idButton = `agregarCarrito${producto.id}`
     document.getElementById("cards-dos").innerHTML +=
 `<div class='card' style='width: 16rem;'>
@@ -57,12 +197,17 @@ productosCard2.forEach((producto) => {
 </div>`;
 })
 
+
+
 productosCard2.forEach((producto) => {
     const idButton = `agregarCarrito${producto.id}`
     document.getElementById(idButton).addEventListener('click', () => {
-        alert("Agregaste al carrito:"+" "+ producto.nombre);
+        carrito.push(producto);
+        document.getElementById("sumarCarrito").innerHTML = carrito.length;
+        console.log(carrito);
+        localStorage.setItem("totalCarrito", carrito.length);
     })
-});
+}); */
 
 
 
@@ -73,93 +218,7 @@ productosCard2.forEach((producto) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-<div class="card" style="width: 16rem;">
-                <img src="./imagenesIndex/imagenesCards/imagencard1.webp" class="card-img-top btn" alt="card imagen">
-                <div class="card-body">
-                    <h5 class="card-title text-center">Nike Jordan 6 off white</h5>
-                    <p class="card-text text-center"> <b class="precio">$310</b>$280</p>
-                    <a href="#" class="button" onclick="agregarAlCarrito('Nike Jordan 6 off white')">Agregar al carrito</a>
-                </div>
-            </div> */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* "Buscador casero jeje" */
 
 
 
