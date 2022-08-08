@@ -5,22 +5,9 @@
     font-family: 'Gentium Book Plus', serif;
 }
 
-
-.barraBuscadora{
+.modal-texto{
     display:flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-#buscador{
-    width:600px;
-    border:solid 2px;
-    border-radius:10px;
-}
-
-
-.filtro{
-    display:none;
+    justify-content: space-between;
 }
 
 

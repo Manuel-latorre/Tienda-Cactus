@@ -33,11 +33,11 @@
                             <a class="nav-link" aria-current="page" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Sneakers
+                            <a class="nav-link filtrar-categoria dropdown-toggle" data-categoria="Zapatillas" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Zapatillas
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="./paginas-sneakers.html/jordanuno.html">Jordan 1</a></li>
+                                    <li><a class="dropdown-item" href="#">Jordan 1</a></li>
                                     <li><a class="dropdown-item" href="#">Jordan 3</a></li>
                                     <li><a class="dropdown-item" href="#">Jordan 4</a></li>
                                     <li><a class="dropdown-item" href="#">Jordan 6</a></li>
@@ -46,20 +46,43 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">T-shirts</a>
+                                <a class="nav-link filtrar-categoria" data-categoria="Remeras">Remeras</a>
                             </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Hoodies</a>
+                    <a class="nav-link filtrar-categoria" data-categoria="Buzos">Buzos</a>
                 </li>
             </ul>
         </div>
+
+        
         <form class="d-flex">
-            <button class="btn btn-outline-dark" type="button" id="carrito">
+            <button class="btn btn-outline-dark" type="button" id="carrito" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="generarCardsCarrito()">
                 <i class="bi-cart-fill me-1"></i>
-                <span id="sumarCarrito" class="badge bg-dark ">0</span>
+                <span id="sumarCarrito" class="badge bg-dark">0</span>
             </button>
         </form>
         
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mi carrito</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="cards-modal">
+                <div class="modal-texto">
+                    <h5>Producto</h5>
+                    <h5>Precio</h5>
+                    <h5>Imagen</h5>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Iniciar compra</button>
+            </div>
+            </div>
+        </div>
     </div>
 </nav>
 </header>
@@ -88,29 +111,11 @@
             </button>
         </div>
 
-        <div class="barraBuscadora">
-            <input type="text" name="buscador" id="buscador" placeholder="  Buscar">
-        </div> 
-
-        <div>
-            <li class="productos">Nike Jordan 6 off white</li>
-            <li class="productos">Nike Jordan 1 high Og</li>
-            <li class="productos">Nike Jordan 4 X Levis</li>
-            <li class="productos">Nike Jordan 1 low</li>
-            <li class="productos">Hoodie Cactus Jack</li>
-            <li class="productos">Remera Kaws</li>
-            <li class="productos">Remera McQueen</li>
-            <li class="productos">Crewneck Supreme</li>
-        </div>
-
-        
-        
         <div>
             <h2 class="titulosMenu">Sneakers</h2>
         </div>
         
         <section id="cards">
-            
             
         </section>
         
