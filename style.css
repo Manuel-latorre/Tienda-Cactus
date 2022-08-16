@@ -5,12 +5,103 @@
     font-family: 'Gentium Book Plus', serif;
 }
 
+
+
+.carrusel-marcas{
+    background-color:rgb(156, 135, 135);
+    padding:10px;
+    display:flex;
+    justify-content: center;
+}
+
+section .card-carrusel .image{
+    height: 140px;
+    width: 140px;
+    padding:3px;
+    background:#907761;
+    border-radius:30%;
+}
+
+section .card-carrusel .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:50%;
+    
+}
+
+
+.card-carrusel{
+    position: relative;
+
+}
+
+.card-carrusel::before{
+    content:"";
+    position: absolute;
+    height:40%;
+    width:100%;
+
+}
+
+.card-carrusel .card-content{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index:100; 
+}
+
+
+#fa-cart{
+    color:white;
+}
+
+.botonCarrito{
+    width:180px;
+    color:white;
+    background-color: black;
+    border-radius:10px;
+}
+
+
+.imagenes-carrusel{
+    width:150px;
+}
+
+.carrusel-items{
+    display: flex;
+    overflow-x: scroll;
+    overflow-x: hidden;
+}
+
+.carrusel-item{
+    width:300px;
+    height:300px;
+}
+
+.carrusel-item img{
+    object-fit:cover;
+}
+
+
+
+
+
+
+
+
+
+
+
 .modal-texto{
     display:flex;
     justify-content: space-between;
 }
 
-
+.filtro{
+    display: none;
+}
 
 
 
@@ -88,6 +179,12 @@
 }
 
 #cards-dos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+}
+
+#cards-buzos{
     display:flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
