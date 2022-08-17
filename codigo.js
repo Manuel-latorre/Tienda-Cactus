@@ -1,21 +1,3 @@
-
-/*generador de cards en el modal para ver el carrito con los productos agregados */
-
-
-function generarCardsCarrito(){
-    carrito.forEach((producto) => {
-        document.getElementById("cards-modal").innerHTML += `<div class="modal-texto">
-        <p>${producto.nombre} </p>
-        <p>$${producto.precio} </p>
-        <p><img src="${producto.img}" style="width:100px"></p>
-        <button class="botonEliminar btn btn-danger btn-small fa fa-trash" onclick="eliminarDelCarrito(${producto.id})"></button>
-        </div>`;
-    });
-}
-
-
-
-
 /* array de los productos */
 
 const productos = [
@@ -86,6 +68,25 @@ productos.forEach((producto) => {
     </div>`;
 });
 
+/* funcion para eliminar productos del carrito */
+
+function generarCardsCarrito(){
+    carrito.forEach((producto) => {
+        document.getElementById("cards-modal").innerHTML += `<div class="modal-texto">
+        <p>${producto.nombre} </p>
+        <p>$${producto.precio} </p>
+        <p><img src="${producto.img}" style="width:100px"></p>
+        <button class="botonEliminar btn btn-danger btn-small fa fa-trash" onclick="eliminarProducto(${producto.id})"></button>
+        </div>`;
+    });
+}
+
+function eliminarProducto(idDelProducto) {
+    const eliminarDelCarrito = carrito.findIndex((borrar) => borrar.id === idDelProducto)
+    carrito.splice(eliminarDelCarrito, 1)
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    window.location.reload();
+}
 
 
 
@@ -155,104 +156,3 @@ const stop = () => {
 
 
 start();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
