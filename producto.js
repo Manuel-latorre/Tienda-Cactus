@@ -2,7 +2,7 @@ const productoAMostrar = JSON.parse(localStorage.getItem('verProducto'));
 console.log(productoAMostrar);
 document.getElementById("nombre").innerHTML = productoAMostrar.nombre;
 document.getElementById("precio").innerHTML = "$"+ productoAMostrar.precio;
-document.getElementById("seccion-imagenes").innerHTML += `<img class="card-img-top mb-5 mb-md-0" src="${productoAMostrar.img}" alt="imagen">`
+document.getElementById("seccion-imagenes").innerHTML += `<img class="card-img-top mb-5 mb-md-0" src="./${productoAMostrar.img}" alt="imagen">`
 document.getElementById("descripcion").innerHTML = productoAMostrar.descripcion;
 document.getElementById("sku").innerHTML = productoAMostrar.sku;
 
@@ -28,5 +28,4 @@ document.getElementById("agregarAlCarrito").addEventListener('click', () => {
         imageAlt: 'Custom image',
         })
 })
-
 

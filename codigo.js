@@ -1,4 +1,6 @@
 
+/*generador de cards en el modal para ver el carrito con los productos agregados */
+
 
 function generarCardsCarrito(){
     carrito.forEach((producto) => {
@@ -6,8 +8,7 @@ function generarCardsCarrito(){
         <p>${producto.nombre} </p>
         <p>$${producto.precio} </p>
         <p><img src="${producto.img}" style="width:100px"></p>
-        <button class="btn btn-danger btn-small fa fa-trash" id = "eliminarProducto">
-        </button>
+        <button class="botonEliminar btn btn-danger btn-small fa fa-trash" onclick="eliminarDelCarrito(${producto.id})"></button>
         </div>`;
     });
 }
@@ -15,6 +16,7 @@ function generarCardsCarrito(){
 
 
 
+/* array de los productos */
 
 const productos = [
     {id: 1, nombre:"Hoodie Cactus Jack", precio: 23500, img: "./imagenesIndex/imagenesCards/hoodie1.jpg", category: 'Home', descripcion: "Este buzo con capucha y bolsillos tipo canguro es tan cómoda que la usarás todos los días. Su maravilloso diseño complementará tu look.<br> Composicion: 100% poliester <br> Origen: China <br> Calce: Hoodie"},
@@ -67,6 +69,11 @@ const productos = [
 ];
 
 
+
+
+/* generador de cards de los productos */
+
+
 productos.forEach((producto) => {
     document.getElementById("cards").innerHTML +=
     `<div class='card' style='width: 16rem;'>
@@ -78,6 +85,13 @@ productos.forEach((producto) => {
     </div>
     </div>`;
 });
+
+
+
+
+
+
+/* funciones para filtrar los productos */
 
 for (const nodoHTML of document.getElementsByClassName('filtrar-categoria')){
     nodoHTML.onclick = (event) => {
@@ -115,6 +129,8 @@ function verProducto(id){
 
 
 
+/*carrusel en movimiento */
+
 const carrusel = document.querySelector(".carrusel-items");
 
 let maxScrollLeft = carrusel.scrollWidth - carrusel.clientWidth;
@@ -141,191 +157,6 @@ const stop = () => {
 start();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-        
-        
-        
-
-
-
-
-       
-       
-       
-       
-       
-       
-       
-
-       
-       
-       
-       
-       
-
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-
-       
-       
-       
-
-
-       
-       
-       
-       
-       
-       
-       
-
-
-
-       /* remeras.forEach((producto) => {
-           document.getElementById("cards-remeras").innerHTML +=
-           `<div class='card' style='width: 16rem;'>
-           <img src="${producto.img}" class='card-img-top btn' alt='card imagen'>
-           <div class='card-body'>
-           <h5 class='card-title text-center'>${producto.nombre}</h5>
-           <p class="card-text text-center"><b>$${producto.precio}</b></p>
-           </div>
-           </div>`;
-       });  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* document.addEventListener("keyup", e => {
-    if (e.target.matches("#buscador")){
-
-        document.querySelectorAll("").forEach(elemento => {
-            elemento.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-            ?elemento.classList.remove("filtro")
-            :elemento.classList.add("filtro")
-        })
-    }
-}) */
 
 
 

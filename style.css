@@ -64,21 +64,25 @@ section .card-carrusel .image img{
     border-radius:10px;
 }
 
+.botonEliminar{
+    height:40px;
+    margin-top:50px;
+}
+
 
 .imagenes-carrusel{
     width:150px;
+    border-radius:50px;
+    
 }
 
 .carrusel-items{
     display: flex;
     overflow-x: scroll;
     overflow-x: hidden;
+    background-color: rgb(188, 192, 192);
 }
 
-.carrusel-item{
-    width:300px;
-    height:300px;
-}
 
 .carrusel-item img{
     object-fit:cover;
@@ -334,6 +338,10 @@ button:focus:not(:focus-visible) {
 @media (max-width:700px){
     #buscador{
         width:300px;
+    }
+    .imagenes-carrusel{
+        width:70px;
+        border-radius:25px;
     }
 }
 
