@@ -169,6 +169,7 @@ section .card-carrusel .image img{
 }
 
 
+
 .filtrar-titulo{
     background-color: black;
     color: #fff;
@@ -247,8 +248,7 @@ section .card-carrusel .image img{
 }
 
 .iconoFiltrar{
-    width: 50px;
-    margin-top:10px;
+    width: 100px;
 }
 
 
@@ -417,6 +417,10 @@ button:focus:not(:focus-visible) {
     
     .texto-categorias{
         font-size:12px;
+    }
+
+    .accordion-body {
+        padding: 5px !important;
     }
 
 }
