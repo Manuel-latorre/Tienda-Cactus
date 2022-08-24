@@ -12,20 +12,11 @@ document.getElementById("sumarCarrito").innerHTML = carrito.length;
 const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
 document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
 
+/*funcion para agregar al carrito  */
 
 document.getElementById("agregarAlCarrito").addEventListener('click', () => {
-    carrito.push(productoAMostrar);
-    document.getElementById("sumarCarrito").innerHTML = carrito.length;
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
-    document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
-    Swal.fire({
-        title: 'Agregaste al carrito:',
-        text: productoAMostrar.nombre,
-        imageUrl: productoAMostrar.img,
-        imageWidth: 250,
-        imageHeight: 250,
-        imageAlt: 'Custom image',
-        })
-})
+    validarStock(productoAMostrar);
+    }
+    
+)
 

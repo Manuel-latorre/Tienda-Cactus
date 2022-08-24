@@ -1,4 +1,50 @@
 
+async function validarStock(id) {
+console.log(id)
+    await fetch("productos.json")
+        .then(response => response.json())
+        .then(data => {
+            const idproductos = data.find(x => x.id == id.id)
+                console.log(idproductos.stock);
+            if (idproductos.stock > 0) {
+                carrito.push(productoAMostrar);
+        document.getElementById("sumarCarrito").innerHTML = carrito.length;
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
+        document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
+        
+        Swal.fire({
+            title: 'Agregaste al carrito:',
+            text: productoAMostrar.nombre,
+            imageUrl: productoAMostrar.img,
+            imageWidth: 250,
+            imageHeight: 250,
+            imageAlt: 'Custom image',
+        })
+    }
+    else{Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: '¡Lo sentimos! No hay stock de este producto',
+    })
+        
+    }
+
+        })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* array de los productos */
 
 const productos = [
