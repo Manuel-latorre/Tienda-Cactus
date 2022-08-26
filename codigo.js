@@ -177,6 +177,7 @@ productos.forEach((producto) => {
     <button class="botonStyle" onclick="verProducto(${producto.id})">Ver producto</button>
     </div>
     </div>`;
+    
 });
 
 
@@ -192,13 +193,21 @@ function generarCardsCarrito(){
         <p>${producto.nombre} </p>
         <p>$${producto.precio} </p>
         <p><img src="${producto.img}" style="width:80px"></p>
-        <button class="botonEliminar btn btn-danger btn-small fa fa-trash" onclick="eliminarProducto(${producto.id})"></button>
+        <button class="botonEliminar btn btn-danger btn-small fa fa-trash" id="botonEliminar" onclick="eliminarProducto(${producto.id})"></button>
         </div>`;
     });
     
     const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
     document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
     
+    const btnEliminar = document.getElementById("botonEliminar")
+    btnEliminar.addEventListener("click", (idDelProducto) => {
+        const eliminarDelCarrito = carrito.findIndex((borrar) => borrar.id === idDelProducto)
+        carrito.splice(eliminarDelCarrito, 1)
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        window.location.reload();
+    });
+
     
     
     const btnVaciar = document.getElementById('vaciarCarrito')
@@ -210,13 +219,16 @@ function generarCardsCarrito(){
     
 }
 
-
 function eliminarProducto(idDelProducto) {
     const eliminarDelCarrito = carrito.findIndex((borrar) => borrar.id === idDelProducto)
     carrito.splice(eliminarDelCarrito, 1)
     localStorage.setItem("carrito", JSON.stringify(carrito));
     window.location.reload();
 }
+
+
+
+
 
 
 /* funcion para vaciar carrito */
@@ -415,3 +427,5 @@ document.addEventListener("keyup", e=> {
         })
     }
 })
+
+

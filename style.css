@@ -73,7 +73,7 @@ section .card-carrusel .image img{
 .cards-secundarias{
     background-color:white;
     border-radius:20px;
-    margin:20px;
+    margin:40px;
     transition:0.5s;
 }
 
@@ -166,16 +166,18 @@ section .card-carrusel .image img{
 
 
 .bannerEnvios{
-    background-color:#907761;
+    background-color:gray;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+
 .bannerEnvios p{
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
     color: black;
-    
+    margin:5px;
 }
 
 
@@ -503,6 +505,10 @@ button:focus:not(:focus-visible) {
 
     .card{
         height:370px;
+    }
+
+    .bannerEnvios p{
+        font-size:14px;
     }
 
 }
