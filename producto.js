@@ -1,5 +1,4 @@
 const productoAMostrar = JSON.parse(localStorage.getItem('verProducto'));
-console.log(productoAMostrar);
 document.getElementById("nombre").innerHTML = productoAMostrar.nombre;
 document.getElementById("precio").innerHTML = "$"+ productoAMostrar.precio;
 document.getElementById("seccion-imagenes").innerHTML += `<img class="card-img-top mb-5 mb-md-0" src="./${productoAMostrar.img}" alt="imagen">`
@@ -12,6 +11,7 @@ document.getElementById("sumarCarrito").innerHTML = carrito.length;
 const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
 document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
 
+
 /*funcion para agregar al carrito  */
 
 document.getElementById("agregarAlCarrito").addEventListener('click', () => {
@@ -19,4 +19,3 @@ document.getElementById("agregarAlCarrito").addEventListener('click', () => {
     }
     
 )
-

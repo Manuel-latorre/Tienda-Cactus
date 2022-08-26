@@ -31,30 +31,30 @@
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link filtrar-categoria" aria-current="page" data-categoria="Home">Home</a>
+                            <a class="nav-link filtrar-categoria" type="button" href="index.html" aria-current="page" data-categoria="Home">Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link filtrar-categoria dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-categoria="Zapatillas">
                                 Zapatillas
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item filtrar-zapatilla" data-modelo="Jordan1">Jordan 1</a></li>
-                                    <li><a class="dropdown-item filtrar-zapatilla" data-modelo="Jordan3">Jordan 3</a></li>
-                                    <li><a class="dropdown-item filtrar-zapatilla" data-modelo="Jordan4">Jordan 4</a></li>
-                                    <li><a class="dropdown-item filtrar-zapatilla" data-modelo="NikeDunk">Nike Dunks</a></li>
-                                    <li><a class="dropdown-item filtrar-zapatilla" data-modelo="vans">Vans</a></li>
-                                </ul>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="Jordan1">Jordan 1</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="Jordan3">Jordan 3</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="Jordan4">Jordan 4</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="NikeDunk">Nike Dunks</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="vans">Vans</a></li>
+                                </ul> 
                             </li>
                 <li class="nav-item">
-                    <a class="nav-link filtrar-categoria" data-categoria="Remeras">Remeras</a>
+                    <a class="nav-link filtrar-categoria" type="button" href="#" data-categoria="Remeras">Remeras</a>
+        
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link filtrar-categoria"  data-categoria="Buzos">Buzos</a>
+                    <a class="nav-link filtrar-categoria" type="button" href="#"  data-categoria="Buzos">Buzos</a>
                 </li>
             </ul>
         </div>
-
         
         <form class="d-flex">
             <button class="btn btn-outline-dark" type="button" id="carrito" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="generarCardsCarrito()">
@@ -62,7 +62,6 @@
                 <span id="sumarCarrito" class="badge bg-dark">0</span>
             </button>
         </form>
-        
     </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -73,14 +72,12 @@
             </div>
             <div class="modal-body" id="cards-modal">
                 <div class="modal-texto">
-                    <h5>Producto</h5>
-                    <h5>Precio</h5>
-                    <h5>Imagen</h5>
+
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Vaciar Carrito</button>
-                <button type="button" class="btn btn-primary">Iniciar compra</button>
+            <div class="modal-footer" id="modal-footer">
+                <button type="button" class="btn btn-secondary botonVaciarCarrito" id="vaciarCarrito">Vaciar Carrito</button>
+                <button type="button" class="btn btn-primary botonInicarCompra">Iniciar compra</button>
             </div>
             </div>
         </div>
@@ -114,49 +111,49 @@
         <div class="carrusel">
             <div class="carrusel-items">
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/cactusjack-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Cactus Jack" src="./imagenes-carrusel/cactusjack-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/vans-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Vans" src="./imagenes-carrusel/vans-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/palmangels-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Palm Angels" src="./imagenes-carrusel/palmangels-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/jordan-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Jordan" src="./imagenes-carrusel/jordan-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/nike-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Nike" src="./imagenes-carrusel/nike-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="/./imagenes-carrusel/kappa-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Kappa" src="/./imagenes-carrusel/kappa-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/eric-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="" src="./imagenes-carrusel/eric-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/levis-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Levis" src="./imagenes-carrusel/levis-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/carhartt-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Carhartt" src="./imagenes-carrusel/carhartt-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/northface-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="The North Face" src="./imagenes-carrusel/northface-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/trasher-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="" src="./imagenes-carrusel/trasher-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/vlone-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="" src="./imagenes-carrusel/vlone-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/stussy-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="" src="./imagenes-carrusel/stussy-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/palace-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Palace" src="./imagenes-carrusel/palace-carrusel.png" alt="">
                 </div>
                 <div class="carrusel-item">
-                    <img class="imagenes-carrusel" src="./imagenes-carrusel/bape-carrusel.png" alt="">
+                    <img class="imagenes-carrusel filtrar-marca" type="button" href="#" data-marca="Bape" src="./imagenes-carrusel/bape-carrusel.png" alt="">
                 </div>
             </div>
         </div>
@@ -167,49 +164,57 @@
                     </h3>
                     <div class="accordion-body text-center">
                         <h4 class="filtrar-titulos text-center ">Categoría</h4>
-                        <li class="texto-categorias filtrar-categoria" data-categoria="Home">Home</li>
-                        <li class="texto-categorias filtrar-categoria" data-categoria="Remeras">Remeras</li>
-                        <li class="texto-categorias filtrar-categoria" data-categoria="Buzos">Buzos</li>
-                        <li class="texto-categorias filtrar-categoria" data-categoria="Zapatillas">Zapatillas</li>
+                        <li class="texto-categorias filtrar-categoria" type="button" href="#" data-categoria="Home">Home</li>
+                        <li class="texto-categorias filtrar-categoria" type="button" href="#" data-categoria="Remeras">Remeras</li>
+                        <li class="texto-categorias filtrar-categoria" type="button" href="#" data-categoria="Buzos">Buzos</li>
+                        <li class="texto-categorias filtrar-categoria" type="button" href="#" data-categoria="Zapatillas">Zapatillas</li>
                     </div>
                     <div class="accordion-body text-center">
                         <h4 class="text-center filtrar-titulos">Marcas</h4>
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Cactus Jack" src="./imagenes-filtrador/cactusfiltrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Levis" src="./imagenes-filtrador/levisfiltrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Palm Angels" src="./imagenes-filtrador/angel-filtrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Jordan" src="./imagenes-filtrador/jordanfiltrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Nike" src="./imagenes-filtrador/nikefiltrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Vans" src="./imagenes-filtrador/vansfiltrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Amiri" src="./imagenes-filtrador/amiri-filtrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Mc Queen" src="./imagenes-filtrador/mcqueen-filtrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Kappa" src="./imagenes-filtrador/kappafiltrador.png">
-                        <img class="iconoFiltrar filtrar-marca"  data-marca="Off White" src="./imagenes-filtrador/offwhite-filtrador.png">
+                        <div>
+                            <input class="buscador" type="text" name="buscador" id="buscador" placeholder=" Buscar..." >
+                        </div>
+                        <ul class="marcas-buscador">
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Nike">Nike</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Bape">Bape</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="The North Face">The North Face</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Palace">Palace</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Vans">Vans</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Jordan">Jordan</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Kappa">Kappa</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Mc Queen">Mc Queen</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Amiri">Amiri</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Levis">Levis</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Cactus Jack">Cactus Jack</li>
+                            <li class="marcas filtrar-marca" type="button" href="#"  data-marca="Palm Angels">Palm Angels</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Carhartt">Carhartt</li>
+                            <li class="marcas filtrar-marca" type="button" href="#" data-marca="Off White">Off White</li>
+                        </ul>
                     </div>
                     <div class="accordion-body text-center">
                         <h4 class="filtrar-titulos text-center">Colores</h4>
-                        <i class="box-rojo fa-solid fa-square-full filtrar-color" data-color="rojo"></i>
-                        <i class="box-negro fa-solid fa-square-full filtrar-color" data-color="negro"></i>
-                        <i class="box-azul fa-solid fa-square-full filtrar-color" data-color="azul"></i>
-                        <i class="box-amarillo fa-solid fa-square-full filtrar-color" data-color="amarillo"></i>
-                        <i class="box-rosa fa-solid fa-square-full filtrar-color" data-color="rosa"></i>
-                        <i class="box-marron fa-solid fa-square-full filtrar-color" data-color="marron"></i>
-                        <i class="box-gris fa-solid fa-square-full filtrar-color" data-color="gris"></i>
-                        <i class="box-celeste fa-solid fa-square-full filtrar-color" data-color="celeste"></i>
-                        <i class="box-verde fa-solid fa-square-full filtrar-color" data-color="verde"></i>
-                        <i class="box-blanco fa-solid fa-square-full filtrar-color" data-color="blanco"></i>
+                        <i class="box-rojo fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="rojo"></i>
+                        <i class="box-negro fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="negro"></i>
+                        <i class="box-azul fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="azul"></i>
+                        <i class="box-amarillo fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="amarillo"></i>
+                        <i class="box-rosa fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="rosa"></i>
+                        <i class="box-marron fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="marron"></i>
+                        <i class="box-gris fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="gris"></i>
+                        <i class="box-celeste fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="celeste"></i>
+                        <i class="box-verde fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="verde"></i>
+                        <i class="box-blanco fa-solid fa-square-full filtrar-color" type="button" href="#" data-color="blanco"></i>
                     </div>
                 </div>
+                
+
                 <section id="cards">
-    
+                    
                 </section> 
-            </section>
-            
+
+        </main>
         
         
-    </main>
-
-
-    <footer>
+        <footer>
         <section class="footerDivs">
             <div>
                 <h3 class="titulosFooter">Redes sociales</h3>

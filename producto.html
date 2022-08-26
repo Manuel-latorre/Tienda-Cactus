@@ -33,21 +33,20 @@
                         <li class="nav-item">
                             <a class="nav-link filtrar-categoria" aria-current="page" href="/index.html">Home</a>
                         </li>
-                        <!--  <li class="nav-item dropdown">
-                            <a class="nav-link filtrar-categoria dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link filtrar-categoria dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-categoria="Zapatillas">
                                 Zapatillas
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="/paginas-zapatillas/jordanuno.html">Jordan 1</a></li>
-                                    <li><a class="dropdown-item" href="#">Jordan 3</a></li>
-                                    <li><a class="dropdown-item" href="#">Jordan 4</a></li>
-                                    <li><a class="dropdown-item" href="#">Jordan 6</a></li>
-                                    <li><a class="dropdown-item" href="#">Nike Dunks low</a></li>
-                                    <li><a class="dropdown-item" href="#">Nike Dunks High</a></li>
-                                </ul>
-                            </li> -->
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="Jordan1">Jordan 1</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="Jordan3">Jordan 3</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="Jordan4">Jordan 4</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="NikeDunk">Nike Dunks</a></li>
+                                    <li><a class="dropdown-item filtrar-zapatilla" type="button" href="#"  data-modelo="vans">Vans</a></li>
+                                </ul> 
+                            </li>
                 <li class="nav-item">
-                    <a class="nav-link filtrar-categoria"  data-categoria="Remeras">Remeras</a>
+                    <a class="nav-link filtrar-categoria" data-categoria="Remeras">Remeras</a>
                 </li>
 
                 <li class="nav-item">
@@ -74,14 +73,13 @@
             </div>
             <div class="modal-body" id="cards-modal">
                 <div class="modal-texto">
-                    <h5>Producto</h5>
-                    <h5>Precio</h5>
-                    <h5>Imagen</h5>
+                    
+                    
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Iniciar compra</button>
+                <button type="button" class="btn btn-secondary botonVaciarCarrito" id="vaciarCarrito">Vaciar Carrito</button>
+                <button type="button" class="btn btn-primary botonInicarCompra">Iniciar compra</button>
             </div>
             </div>
         </div>
@@ -119,105 +117,53 @@
         <!-- Related items section-->
         <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">Quiza tambien te guste</h2>
+                <h2 class="fw-bolder mb-4">Quizá tambien te guste..</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
+                    <div class="cards-secundarias">
+                        <div>
+                            <img class="card-img-top" src="./imagenesIndex/imagenes-buzos/buzocactusjackspeed.jpg" alt="..." />
+                            <div class="card-body">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
-                                    <!-- Product price-->
-                                    $40.00 - $80.00
+                                    <h5>Buzo Cactus Jack Speed Cacti</h5>
+                                    $12799
                                 </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
+                    <div class="cards-secundarias">
+                        <div>
+                            <img class="card-img-top" src="./imagenesIndex/imagenes-buzos/buzolevis.webp" alt="..." />
+                            <div>
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
-                                    $18.00
+                                    <h5>Buzo Levis Moments</h5>
+                                    <span class="text-muted text-decoration-line-through">$24199</span>
+                                    $22199
                                 </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
+                    <div class="cards-secundarias">
+                        <div>
+                            <img class="card-img-top" src="./imagenesIndex/imagenes-remeras/remeracarhartt.webp" alt="..." />
+                            <div class="card-body">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    <h5>Remera Carhartt</h5>
+                                    $14500
                                 </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
+                    <div class="cards-secundarias">
+                        <div>
+                            <img class="card-img-top" src="./imagenesIndex/imagenesCards/cardneck.webp" alt="..." />
+                            <div class="card-body">
                                 <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                    </div>
-                                    <!-- Product price-->
-                                    $40.00
+                                    <h5>Crewneck Supreme</h5>
+                                    $28000
                                 </div>
                             </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
-                            </div>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
