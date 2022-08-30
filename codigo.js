@@ -1,48 +1,12 @@
 
-async function validarStock(id) {
-    console.log(id)
-    await fetch("productos.json")
-    .then(response => response.json())
-    .then(data => {
-        const idproductos = data.find(x => x.id == id.id)
-        if (idproductos.stock > 0) {
-            carrito.push(productoAMostrar);
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
-            document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
-            
-        Swal.fire({
-            title: 'Agregaste al carrito:',
-            text: productoAMostrar.nombre,
-            imageUrl: productoAMostrar.img,
-            imageWidth: 200,
-            imageHeight: 200,
-            imageAlt: 'Custom image',
-        })
-    }
-    else{Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: '¡Lo sentimos! No hay stock de este producto',
-        })
-    
-    
-    }
 
-})
 
+
+function verProducto(id){
+    const indiceProducto = productos.findIndex((producto) => producto.id === id);
+    localStorage.setItem('verProducto', JSON.stringify(productos[indiceProducto]));
+    location.href = "producto.html";
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* array de los productos */
@@ -165,20 +129,7 @@ const productos = [
 
 
 
-/* generador de cards de los productos */
 
-productos.forEach((producto) => {
-    document.getElementById("cards").innerHTML +=
-    `<div class='card' style='width: 16rem;'>
-    <img src="${producto.img}" class='card-img-top btn' alt='card imagen'>
-    <div class='card-body'>
-    <h5 class='card-title text-center'>${producto.nombre}</h5>
-    <p class="card-text text-center"><b>$${producto.precio}</b></p>
-    <button class="botonStyle" onclick="verProducto(${producto.id})">Ver producto</button>
-    </div>
-    </div>`;
-    
-});
 
 
 
@@ -219,16 +170,14 @@ function generarCardsCarrito(){
     
 }
 
+
 function eliminarProducto(idDelProducto) {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) ?? [];
     const eliminarDelCarrito = carrito.findIndex((borrar) => borrar.id === idDelProducto)
     carrito.splice(eliminarDelCarrito, 1)
     localStorage.setItem("carrito", JSON.stringify(carrito));
     window.location.reload();
 }
-
-
-
-
 
 
 /* funcion para vaciar carrito */
@@ -247,18 +196,15 @@ btnVaciar.addEventListener("click", () => {
 
 /* funciones para filtrar los productos */
 
-for (const nodoHTML of document.getElementsByClassName('filtrar-categoria')){
-    nodoHTML.onclick = (event) => {
-        const categoria = (event.target.getAttribute('data-categoria'));
-        filtrarProductosPorCategoria(categoria)
-    }
-}
 
+if (document.title === "Tienda Cactus"){
 
-function filtrarProductosPorCategoria(categoria){
-    document.getElementById("cards").innerHTML = "";
-    const productosFiltrados = productos.filter((producto) => producto.category === categoria);
-    productosFiltrados.forEach((producto) => {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) ?? [];
+    document.getElementById("sumarCarrito").innerHTML = carrito.length;
+    const total = carrito.reduce((acumulador, productoAMostrar) => acumulador + productoAMostrar.precio, 0);
+    document.getElementById("sumarCarrito").innerHTML = `${carrito.length} - $${total}`;
+
+    productos.forEach((producto) => {
         document.getElementById("cards").innerHTML +=
         `<div class='card' style='width: 16rem;'>
         <img src="${producto.img}" class='card-img-top btn' alt='card imagen'>
@@ -267,10 +213,38 @@ function filtrarProductosPorCategoria(categoria){
         <p class="card-text text-center"><b>$${producto.precio}</b></p>
         <button class="botonStyle" onclick="verProducto(${producto.id})">Ver producto</button>
         </div>
-        </div>`; 
-    });
-}
+        </div>`;
 
+    });
+
+
+
+
+    
+    for (const nodoHTML of document.getElementsByClassName('filtrar-categoria')){
+        nodoHTML.onclick = (event) => {
+            const categoria = (event.target.getAttribute('data-categoria'));
+            filtrarProductosPorCategoria(categoria)
+        }
+    }
+
+
+    function filtrarProductosPorCategoria(categoria){
+        document.getElementById("cards").innerHTML = "";
+        const productosFiltrados = productos.filter((producto) => producto.category === categoria);
+        productosFiltrados.forEach((producto) => {
+            document.getElementById("cards").innerHTML +=
+            `<div class='card' style='width: 16rem;'>
+            <img src="${producto.img}" class='card-img-top btn' alt='card imagen'>
+            <div class='card-body'>
+            <h5 class='card-title text-center'>${producto.nombre}</h5>
+            <p class="card-text text-center"><b>$${producto.precio}</b></p>
+            <button class="botonStyle" onclick="verProducto(${producto.id})">Ver producto</button>
+            </div>
+            </div>`; 
+        });
+    }
+    
 /* funcion para filtrar zapatillas por modelos */
 
 for (const nodoHTML of document.getElementsByClassName('filtrar-zapatilla')){
@@ -295,17 +269,6 @@ function filtrarZapatillasPorModelo(model){
         </div>`;
     });
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -361,13 +324,9 @@ function filtrarProductosPorColor(colors){
     });
 }
 
-
-
-function verProducto(id){
-    const indiceProducto = productos.findIndex((producto) => producto.id === id);
-    localStorage.setItem('verProducto', JSON.stringify(productos[indiceProducto]));
-    location.href = "producto.html";
 }
+
+
 
 
 
