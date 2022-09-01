@@ -134,10 +134,6 @@ section .card-carrusel .image img{
     justify-content: space-between;
 }
 
-.filtro{
-    display: none;
-}
-
 
 
 .navbar-light .navbar-nav .nav-link {
@@ -240,6 +236,29 @@ section .card-carrusel .image img{
 
 
 
+#tabla-talles{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom:20px;
+}
+
+
+.botonTalle{
+    background-color:rgb(197, 191, 191);
+    border: solid 1px black;
+    border-radius:3px;
+    padding:7px;
+    width:50px;
+    margin:10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+button:focus:not(:focus-visible) {
+    outline: 0;
+    color: gray !important;
+    border-color: gray !important;
+}
 
 
 
